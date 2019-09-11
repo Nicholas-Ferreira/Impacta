@@ -24,7 +24,7 @@ CREATE TABLE ITEM(
 	qtd SMALLINT,
 	preco MONEY,
 
-    CONSTRAINT pk_item PRIMARY KEY (numero),
+    CONSTRAINT pk_item PRIMARY KEY (cod_pedido, cod_produto),
     CONSTRAINT fk_item_pedido FOREIGN KEY (cod_pedido) REFERENCES PEDIDO(codigo),
     CONSTRAINT fk_item_produto FOREIGN KEY (cod_produto) REFERENCES PRODUTO(codigo)
 );
