@@ -1,0 +1,34 @@
+<form action="#" method="post">
+    <p>
+        <label for="nome">Nome:</label><br />
+        <input type="text" name="nome" id="nome" maxlength="50" required />
+    </p>
+    <p>
+        <label for="email">E-mail:</label><br />
+        <input type="email" name="email" id="email" maxlength="50" required/>
+    </p>
+    <p>
+        <label for="msg">Mensagem:</label><br />
+        <textarea name="msg" id="msg" placeholder="Deixe um mensagem..." maxlength="255"></textarea>
+    </p>
+    <p>
+        <label for="assunto">Estado: </label><br />
+        <select name="assunto" id="assunto" required>
+            <option value="">Escolha um Estado</option>
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="MG">Minas Gerais</option>
+        </select>
+        <input type="checkbox" name="nacionalidade" id="nacionalidade" value="true" />
+        <label for="nacionalidade">Brasilerio?</label>
+    </p>
+    <p>
+        <input type="radio" name="sexo" id="sexo_m" value="M" required/>
+        <label for="sexo_m">Masculino</label>
+        <input type="radio" name="sexo" id="sexo_f" value="F" required/>
+        <label for="sexo_f">Feminino</label>
+    </p>
+    <p class="button">
+        <button type="submit">Enviar</button>
+    </p>
+</form>

@@ -1,0 +1,41 @@
+/*
+ALTERAÇÕES:
+I. Adicionar tabela CLIENTE com cpf e nome.
+II. Adicionar em pedido o cliente que fez o pedido.
+III. Adicionar colunas fabricante e categoria em produto. Categoria tem valor padrão '"Não se aplica".
+III. Garanta que preço (PRODUTO e PEDIDO) sejam maiores que 0.
+IV. Garanta que CPF de cliente tenha 9 dígitos.
+V. Troque a chave primária de ITEM por um id e insira a restrição de unicidade na chave primária anterior.
+*/
+
+CREATE TABLE CLIENTE (
+	cpf CHAR(9) NOT NULL,
+	nome VARCHAR(100) NOT NULL,
+	CONSTRAINT pkCpf PRIMARY KEY (cpf)
+);
+
+ALTER TABLE PEDIDO
+ADD cpf CHAR(9) NOT NULL;
+ALTER TABLE PEDIDO 
+ADD CONSTRAINT fkPedidoCliente
+FOREIGN KEY (cpf) REFERENCES CLIENTE(cpf);
+
+
+ALTER TABLE PRODUTO
+ADD fabricante varchar(50);
+ALTER TABLE PRODUTO
+ADD categoria varchar(50) NOT NULL DEFAULT 'Não se aplica';
+
+ALTER TABLE PRODUTO 
+ADD CONSTRAINT checkPrecoProduto CHECK (preco > 0);
+ALTER TABLE PEDIDO 
+ADD CONSTRAINT checkPrecoPedido CHECK (preco > 0);
+
+ALTER TABLE CLIENTE 
+ADD CONSTRAINT checkCpf CHECK (cpf LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]');
+
+ALTER TABLE ITEM DROP pkItem;
+ALTER TABLE ITEM 
+ADD id INT CONSTRAINT pkItem PRIMARY KEY (id);
+ALTER TABLE ITEM 
+ADD CONSTRAINT uniqItem UNIQUE (cod_pedido, cod_produto, numero)
