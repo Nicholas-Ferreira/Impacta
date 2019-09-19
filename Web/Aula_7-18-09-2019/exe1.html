@@ -1,0 +1,63 @@
+<!-- 
+    EXE1 - Painel de informações
+
+    Altere o css para fatorar o código HTML seguindo a imagem: 
+    https://drive.google.com/open?id=1wolaaQem729G3-h39lXGcpygqMNoptHL
+
+    As regras específicas são:
+     -- Tipo de fonte: Verdana 
+     -- Tamanho da fonte: 16 pixels 
+     -- Largura do painel: 480px pixels
+     -- Alinhamento: centralizado horizontalmente (texto) 
+     -- Espaçamento entre linhas: duplo 
+     -- Cor do texto: vermelho (red)
+     -- Borda com espessura 1.6px cor preta (black)
+     -- Textos normais, exceto os textos pretos (black) que estão em negrito
+
+    Desafio:
+     -- Use no máximo 3 SELETORES (agregação conta como um)!
+     -- Use apenas a unidade EM, mas mantendo o tamanho original.
+     -- Defina as cores utilizando a notação HEXADECIMAL.
+-->
+<!DOCTYPE html>
+<html style="font-size: 20px;">
+    <head>
+        <style>
+
+            body {background-color: #212121;}
+
+            h1, h2, h3 {font-size:1em; font-weight: normal;color: red}
+
+            span {color:black; font-weight: bold}
+
+        { 
+            text-align: center;
+            position: absolute;
+            top:35%;
+            left:35%;
+            width: 480px;
+            background-color: white;
+        }
+
+        div {
+            border: 20px;
+
+        }      
+        </style>
+    </head>
+    <body>
+        <div class="painel" style="font-size: 16px;">
+            <h1>
+                Faculdade Impacta de Tecnologia
+            </h1>
+            
+            <h2>
+                <span>Curso:</span> Análise e Desenvolvimento de Sistemas
+            </h2>
+            
+            <h3>
+                <span>Disciplina:</span> Tecnologais Web
+            </h3>
+        </div>
+    </body>
+</html>

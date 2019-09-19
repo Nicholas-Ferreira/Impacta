@@ -1,0 +1,90 @@
+<!-- 
+    EXE3
+
+    Altere o css para fatorar o código HTML seguindo a imagem: 
+    https://drive.google.com/open?id=18rUa53AgZ0LhEH3BGHxbqytILiLX7qXy
+
+    As regras específicas são:
+     -- A tabela deve ter tamanho 480px, com a borda de largura 1.6px e preta (sem espaço entre as bordas!!!)
+     -- Todas as células devem estar centralizadas e com a primeira letra maiúscula (quando possível)
+     -- As duas primeiras linhas devem ter seus textos em negrito
+     -- As linhas ímpares (1 e 3) devem possuir fundo cinza (grey)
+     -- Todas as notas devem estar em itálico
+     -- As notas maiores ou igual a 7 deveme estar em verde (green)
+     -- As notas menores que 7 devem estar em vermelho (red) 
+
+    Desafio:
+     -- Use apenas TAGS e PSEUDO-CLASSES como SELETORES nesse exercício.
+     -- Utilize a unidade de porcentagem, mas mantendo os tamanhos originais.
+     -- Utilize as cores pela notação HSL
+
+-->
+<!DOCTYPE html>
+<html style="font-size: 20px;">
+    <head>
+        <style>
+            table {
+                width: 480px;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1.6px solid hsl(0, 0%, 0%);
+                text-align: center;
+                text-transform: capitalize;
+            }
+            tr:nth-of-type(2n+3){
+                background-color: hsl(0, 0%, 50%);
+            }
+            td:nth-of-type(n+2){
+                font-style: italic;
+                color: hsl(0, 100%, 50%);
+            }
+            td[data-value='10']{
+                color: hsl(120, 100%, 25%);
+            }
+            td[data-value='9']{
+                color: hsl(120, 100%, 25%);
+            }
+            td[data-value='8']{
+                color: hsl(120, 100%, 25%);
+            }
+            td[data-value='7']{
+                color: hsl(120, 100%, 25%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class=tabela style="font-size: 16px;">
+            <table>
+                <tr>
+                    <th rowspan="2">alunos</th>
+                    <th colspan="2">notas</th>
+                </tr>
+                <tr>
+                    <th>prova</th>
+                    <th>trabalho</th>
+                </tr>
+                <tr>
+                    <td>andré</td>
+                    <td data-value='10'>10</td>
+                    <td data-value='8'>8</td>
+                </tr>
+                <tr>
+                    <td>joana</td>
+                    <td data-value='7'>7</td>
+                    <td data-value='5'>5</td>
+                </tr>
+                <tr>
+                    <td>bruno</td>
+                    <td data-value='2'>2</td>
+                    <td data-value='2'>2</td>
+                </tr>
+                <tr>
+                    <td>maria</td>
+                    <td data-value='5.5'>5,5</td>
+                    <td data-value='10'>10</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
