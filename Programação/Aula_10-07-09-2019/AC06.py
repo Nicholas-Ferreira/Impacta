@@ -1,3 +1,5 @@
+# RA 1900953 - Nicholas Mota Ferreira
+# RA 1900675 - Lucas Eduardo Ano
 
 
 class Funcionario:
@@ -67,7 +69,8 @@ class Aluno:
         self.__disciplinas = disciplinas
 
     def incluir_disciplina(self, disciplina):
-        if(len(self.__disciplinas) > 5):
+        total_disciplinas = len(self.__disciplinas)
+        if(total_disciplinas > 5):
             raise ValueError
         else:
             self.__disciplinas.append(disciplina)
