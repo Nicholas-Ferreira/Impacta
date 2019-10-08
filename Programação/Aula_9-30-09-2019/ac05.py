@@ -41,7 +41,7 @@ class CarroCorrida:
         return self.__velocidade_maxima
 
     def __set_velocidade_atual(self, velocidade):
-        self.__velocidade_atual += velocidade
+        self.__velocidade_atual = velocidade
 
     def ligar(self):
         print("VRUUUMmmmmmmmmm")
@@ -50,7 +50,8 @@ class CarroCorrida:
         print("MMMmmmm......")
 
     def acelerar(self):
-        self.__set_velocidade_atual(10 + self.get_piloto().habilidade * 0.1)
+        self.__set_velocidade_atual(
+          self.get_velocidade_atual() + 10 + self.get_piloto().get_habilidade() * 0.1)
         if self.get_velocidade_atual() > self.get_velocidade_maxima():
             self.__set_velocidade_atual(self.get_velocidade_maxima())
         print("Carro ", self.get_numero_identificacao(), " acelerou")
@@ -62,7 +63,7 @@ class CarroCorrida:
         elif intensidade_freada < 0:
             intensidade_freada = 0
 
-        self.__set_velocidade_atual(-(intensidade_freada * 0.25))
+        self.__set_velocidade_atual(self.get_velocidade_atual() - (intensidade_freada * 0.25))
         if self.get_velocidade_atual() < 0:
             self.__set_velocidade_atual(0.0)
 
