@@ -1,0 +1,8 @@
+{
+    "python.testing.pytestArgs": [
+        "Aula_11-14-10-2019"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true
+}
