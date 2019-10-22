@@ -1,4 +1,10 @@
-use AC09
+/*
+RA 1900953 - Nicholas Ferreira
+RA 1900519 - Fernando Franco
+RA 1901118 - Lara A. Argento
+RA 1900953 - Lucas Eduardo Ano
+RA 1901008 - Leonardo Ferreira
+*/
 
 /*
 Para fins de marketing é necessário um relatório contendo os cursos disponíveis.
@@ -9,12 +15,12 @@ Obs.: Caso um curso tenha mais de um período, devolva uma linha para cada perí
 */
 SELECT 
 	nome as 'Nome do curso', 
-	tipo as 'tipo do curso', 
-	duracao as 'duração do curso',
-	sobre as 'informações', 
-	periodo as 'período',
-	horario as 'horário',
-	valor as 'valor' 
+	tipo as 'Tipo do curso', 
+	duracao as 'Duração do curso',
+	sobre as 'Informações', 
+	periodo as 'Período',
+	horario as 'Horário',
+	valor as 'Valor' 
 FROM 
 	Periodo AS periodo
 INNER JOIN 
@@ -27,11 +33,11 @@ Nome, registro, foto, ano, semestre da turma e letra da turma.
 */
 SELECT
 	usuario.nome as 'Nome', 
-	registro as 'registro', 
-	foto as 'foto',
-	ano as 'ano', 
-	semestre as 'semestre da turma',
-	letra as 'letra da turma'
+	registro as 'Registro', 
+	foto as 'Foto',
+	ano as 'Ano', 
+	semestre as 'Semestre da turma',
+	letra as 'Letra da turma'
 FROM
 	Turma AS turma
 INNER JOIN 
@@ -88,3 +94,20 @@ Nomes e emails (do professor e do aluno).
 Obs.: Somente linhas que o professor ministra disciplinas que o aluno está matriculado
 (solicitações aceitas).
 */
+SELECT
+	usuprofessor.nome AS 'Nome Professor',
+	usuprofessor.email AS 'E-mail Professor',
+	usualuno.email AS 'Nome Aluno',
+	usualuno.email AS 'E-mail Aluno'
+FROM
+	DisciplinaOfertada AS discofertada
+INNER JOIN 
+	Professor AS professor ON discofertada.id_professor = professor.id
+INNER JOIN
+	SolicitacaoMatricula AS solicmatricula ON solicmatricula.id_disciplina = discofertada.id
+INNER JOIN 
+	Aluno AS aluno ON solicmatricula.id_aluno = aluno.id
+INNER JOIN 
+	Usuario AS usualuno ON aluno.id_usuario = usualuno.id
+INNER JOIN 
+	Usuario AS usuprofessor ON professor.id_usuario = usuprofessor.id
