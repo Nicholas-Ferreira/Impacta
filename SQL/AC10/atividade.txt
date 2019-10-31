@@ -1,0 +1,21 @@
+1. Faça um relatório com a quantidade total de alunos matriculados por disciplinas ofertadas no
+   2º semestre de 2019. Devem ser devolvidos:
+   a) uma coluna com sigla do curso, semestre e letra (exemplo: SI 2B)
+   b) uma coluna com número de alunos matriculados.
+
+2. Faça um relatório com a quantidade total de alunos matriculados por disciplinas ofertadas no
+   2º semestre de 2019. Somente das disciplinas que tenham menos que 30 alunos matriculados. Devem ser devolvidos:
+   a) uma coluna com sigla do curso, semestre e letra (exemplo: SI 2B)
+   b) uma coluna com número de alunos matriculados.
+
+3. Faça um relatório que devolva todas as disciplinas ofertadas que tenham em sua bibliografia básica qualquer
+   livro que tenha a palavra 'SQL'. Devem ser devolvidas:
+   a) uma coluna com sigla do curso, semestre e letra (exemplo: SI 2B)
+   b) primeiro nome do professor
+   c) nome do professor responsável
+   d) a bibliografia básica.
+
+4. Faça um relatório que devolva a quantidade de matrículas pendentes por coordenador. Devem ser devolvidos:
+    a) uma coluna com sigla do curso, semestre e letra (exemplo: SI 2B)
+    b) quantidade de matrículas pendentes
+    c) nome do coordenador
