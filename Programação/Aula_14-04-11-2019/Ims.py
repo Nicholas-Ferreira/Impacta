@@ -12,7 +12,7 @@ from sqlalchemy.orm import sessionmaker, relationship
 from getpass import getpass
 
 
-eng = create_engine(f"mssql+pymssql://salas\\1900953:{getpass()}@sql.salas.aulas/fit_alunos")
+eng = create_engine(f"mssql+pymssql://salas\\1900675:{getpass()}@sql.salas.aulas/fit_alunos")
 Base = declarative_base(eng)
 
 # Classes a serem criadas
