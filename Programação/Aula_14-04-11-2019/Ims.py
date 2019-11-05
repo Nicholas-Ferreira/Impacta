@@ -79,46 +79,90 @@ class Curso(Base):
 # Funções de Query para implementar
 
 def lista_alunos():
+    '''
+    retorna uma lista com os nomes de todos os Alunos do banco.
+    '''
     Session = sessionmaker(eng)
     ses = Session()
 
     alunos = ses.query(Aluno).all()
+    nome_alunos = []
     for i in alunos:
-        print(i.author_id, i.name)
+        nome_alunos.append(i.nome)
 
-    print(alunos)
+    return nome_alunos
 
 
 def lista_cursos():
     '''
     retorna uma lista com os nomes de todos os Cursos do banco.
     '''
-    pass
+    Session = sessionmaker(eng)
+    ses = Session()
+
+    cursos = ses.query(Curso).all()
+    nome_cursos = []
+    for i in cursos:
+        nome_cursos.append(i.nome)
+
+    return nome_cursos
 
 
 def lista_professores():
     '''
     retorna uma lista com os apelidos de todos os professores do banco.
     '''
-    pass
+    Session = sessionmaker(eng)
+    ses = Session()
+
+    professores = ses.query(Professor).all()
+    apelido_professores = []
+    for i in professores:
+        apelido_professores.append(i.apelido)
+
+    return apelido_professores
 
 
 def lista_coordenadores():
     '''
     retorna uma lista com os nomes de todos os coordenadores do banco.
     '''
-    pass
+    Session = sessionmaker(eng)
+    ses = Session()
+
+    coordenadores = ses.query(Coordenador).all()
+    nome_coordenadores = []
+    for i in coordenadores:
+        nome_coordenadores.append(i.nome)
+
+    return nome_coordenadores
 
 
 def lista_disciplinas():
     '''
     retorna uma lista com o nome de todas as Discplinas do banco.
     '''
-    pass
+    Session = sessionmaker(eng)
+    ses = Session()
+
+    discplinas = ses.query(Disciplina).all()
+    nome_discplinas = []
+    for i in discplinas:
+        nome_discplinas.append(i.nome)
+
+    return nome_discplinas
 
 
 def carga_horaria_total():
     '''
     retorna a soma da carga horária de todas as diciplinas do banco
     '''
-    pass
+    Session = sessionmaker(eng)
+    ses = Session()
+
+    discplinas = ses.query(Disciplina).all()
+    total = 0
+    for i in discplinas:
+        total += i.carga_horaria
+
+    return total
