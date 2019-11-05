@@ -1,8 +1,8 @@
 # Linguagem de Programação II
 # AC09 SI2B - LMS
 # alunos: Nicholas Ferreira
-#         Leonardo Ferreira
 #         Lucas Ano
+#         
 
 
 from sqlalchemy import create_engine, Column
