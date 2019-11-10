@@ -1,8 +1,7 @@
 # Linguagem de Programação II
 # AC09 SI2B - LMS
-# alunos: Nicholas Ferreira
-#         Lucas Ano
-#         
+# alunos: Nicholas Ferreira RA 1900953
+#         Lucas Eduardo Ano RA 1900675
 
 
 from sqlalchemy import create_engine, Column
@@ -14,9 +13,6 @@ from getpass import getpass
 
 eng = create_engine(f"mssql+pymssql://salas\\1900675:{getpass()}@sql.salas.aulas/fit_alunos")
 Base = declarative_base(eng)
-
-# Classes a serem criadas
-# Crie todos os atributos (colunas) para as classes abaixo
 
 
 class Usuario(Base):
@@ -75,8 +71,6 @@ class Curso(Base):
     id_curso = Column('idCurso', Integer, autoincrement=True, primary_key=True)
     nome = Column('Nome', String(50))
 
-
-# Funções de Query para implementar
 
 def lista_alunos():
     '''
