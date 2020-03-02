@@ -5,14 +5,17 @@
 
 
 from sqlalchemy import create_engine, Column
-from sqlalchemy import Integer, String, ForeignKey
+from sqlalchemy import Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker, relationship
+from sqlalchemy.orm import sessionmaker
 from getpass import getpass
 
 
 eng = create_engine(f"mssql+pymssql://salas\\1900675:{getpass()}@sql.salas.aulas/fit_alunos")
 Base = declarative_base(eng)
+
+Session = sessionmaker(eng)
+ses = Session()
 
 
 class Usuario(Base):
@@ -73,12 +76,6 @@ class Curso(Base):
 
 
 def lista_alunos():
-    '''
-    retorna uma lista com os nomes de todos os Alunos do banco.
-    '''
-    Session = sessionmaker(eng)
-    ses = Session()
-
     alunos = ses.query(Aluno).all()
     nome_alunos = []
     for i in alunos:
@@ -88,12 +85,6 @@ def lista_alunos():
 
 
 def lista_cursos():
-    '''
-    retorna uma lista com os nomes de todos os Cursos do banco.
-    '''
-    Session = sessionmaker(eng)
-    ses = Session()
-
     cursos = ses.query(Curso).all()
     nome_cursos = []
     for i in cursos:
@@ -103,12 +94,6 @@ def lista_cursos():
 
 
 def lista_professores():
-    '''
-    retorna uma lista com os apelidos de todos os professores do banco.
-    '''
-    Session = sessionmaker(eng)
-    ses = Session()
-
     professores = ses.query(Professor).all()
     apelido_professores = []
     for i in professores:
@@ -118,12 +103,6 @@ def lista_professores():
 
 
 def lista_coordenadores():
-    '''
-    retorna uma lista com os nomes de todos os coordenadores do banco.
-    '''
-    Session = sessionmaker(eng)
-    ses = Session()
-
     coordenadores = ses.query(Coordenador).all()
     nome_coordenadores = []
     for i in coordenadores:
@@ -133,12 +112,6 @@ def lista_coordenadores():
 
 
 def lista_disciplinas():
-    '''
-    retorna uma lista com o nome de todas as Discplinas do banco.
-    '''
-    Session = sessionmaker(eng)
-    ses = Session()
-
     discplinas = ses.query(Disciplina).all()
     nome_discplinas = []
     for i in discplinas:
@@ -148,12 +121,6 @@ def lista_disciplinas():
 
 
 def carga_horaria_total():
-    '''
-    retorna a soma da carga horária de todas as diciplinas do banco
-    '''
-    Session = sessionmaker(eng)
-    ses = Session()
-
     discplinas = ses.query(Disciplina).all()
     total = 0
     for i in discplinas:
