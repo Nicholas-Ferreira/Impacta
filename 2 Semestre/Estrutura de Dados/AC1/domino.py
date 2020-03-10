@@ -309,6 +309,3 @@ class Domino():
     #pra igualdade funcionar bem
     def __eq__(self,other):
         return self.esquerda == other.esquerda and self.direita == other.direita
-
-
-runTests()
