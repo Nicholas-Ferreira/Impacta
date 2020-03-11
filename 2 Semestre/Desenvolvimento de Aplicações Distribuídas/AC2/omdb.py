@@ -158,13 +158,31 @@ O dicionário deve ter as seguintes chaves:
 
 E os dados devem ser preenchidos baseado nos dados do site.
 '''
+class IdInvalida(Exception):
+    def __init__(self,*args,**kwargs):
+        Exception.__init__(self,*args,**kwargs)
+
 def dicionario_do_filme_por_id(id_filme):
   res = busca_por_id(id_filme)
+
+  if(res.get('Error')):
+    raise IdInvalida
+  for notas in res['Ratings']:
+    if(notas['Source'] == 'Rotten Tomatoes'):
+      nota_rotten = int(notas['Value'].replace('%', ''))/100
+    if(notas['Source'] == 'Metacritic'):
+      nota_metacritic = int(notas['Value'].replace('/100', ''))/100
+  nota_media = (nota_rotten + nota_metacritic) / 2
+  nota_media += 0.01
   movie = {
     'ano': res['Year'],
     'nome': res['Title'],
     'diretor': res['Director'],
-    'genero': res['Genre']
+    'genero': res['Genre'],
+    'poster': res['Poster'],
+    'nota_rotten_tomatoes': nota_rotten,
+    'nota_metacritic': nota_metacritic,
+    'nota_media': nota_media
   }
   return movie
 
@@ -197,7 +215,6 @@ def busca_filmes_grande(texto_buscar):
   search = []
   search.extend(busca_filmes(texto_buscar, 1))
   search.extend(busca_filmes(texto_buscar, 2))
-  print(search)
   return search
 
 '''
@@ -242,8 +259,15 @@ receber a resposta {'movie':8,'series':2}.
 Confira, acessando a URL: 
 http://www.omdbapi.com/?s=menace&apikey=ca63d052
 '''
+def busca_qtd(texto_buscar, query = ''):
+  res = busca_por_texto(texto_buscar, query)
+  qnt = res['totalResults']
+  return qnt
+
 def conta_tipos_de_midia_para_busca(texto_buscar):
-    pass
+  movies = busca_qtd(texto_buscar, 'type=movie')
+  series = busca_qtd(texto_buscar, 'type=series')
+  return { 'movie':movies, 'series':series } 
 
 '''
 Outra coisa que podemos fazer com nossos 10 resultados é
@@ -384,6 +408,7 @@ class TestStringMethods(unittest.TestCase):
                 self.fail('Ano não encontrado.')
             if 'nome' not in filme:
                 self.fail('Nome não encontrado.')
+            break
         if not achei:
             self.fail('Filme "A New Hope" não encontrado.')
     
@@ -397,7 +422,8 @@ class TestStringMethods(unittest.TestCase):
         try:
             dicionario_do_filme_por_id('tt0796366naoao')
         except IdInvalida:
-            print('Ok, você levantou a exceção desejada.')
+            pass
+            #print('Ok, você levantou a exceção desejada.')
         except:
             self.fail('Você levantou uma exceção diferente.')
         else:

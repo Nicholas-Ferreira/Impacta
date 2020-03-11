@@ -1,0 +1,20 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch db.json"
+  },
+  "keywords": [
+    "api",
+    "ac5",
+    "impacta",
+    "desenvolvimento",
+    "de",
+    "aplicacoes",
+    "distribuidas"
+  ],
+  "author": "Nicholas Ferreira",
+  "license": "ISC"
+}
