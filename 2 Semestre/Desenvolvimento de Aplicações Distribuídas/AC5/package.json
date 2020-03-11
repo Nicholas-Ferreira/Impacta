@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --watch db.json"
+    "start": "json-server --watch https://github.com/Nicholas-Ferreira/Impacta/blob/master/2%20Semestre/Desenvolvimento%20de%20Aplica%C3%A7%C3%B5es%20Distribu%C3%ADdas/AC5/api/db.json"
   },
   "keywords": [
     "api",
