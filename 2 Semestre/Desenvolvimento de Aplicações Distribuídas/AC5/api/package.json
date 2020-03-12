@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "pm2-runtime server.js"
+  },
+  "keywords": [
+    "api",
+    "ac5",
+    "impacta",
+    "desenvolvimento",
+    "aplicacoes",
+    "distribuidas"
+  ],
+  "author": "Nicholas Ferreira",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.16.1"
+  }
+}
