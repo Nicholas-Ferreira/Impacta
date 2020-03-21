@@ -93,7 +93,7 @@ uma determinada busca.
 def busca_qtd_total(texto_buscar):
   res = busca_por_texto(texto_buscar)
   qnt = res['totalResults']
-  return int(qnt) -1
+  return int(qnt)
 
 '''
 Faça uma função busca_qtd_filmes que retorna quantos
@@ -102,7 +102,7 @@ filmes batem com uma determinada busca.
 def busca_qtd_filmes(texto_buscar):
   res = busca_por_texto(texto_buscar, 'type=movie')
   qnt = res['totalResults']
-  return int(qnt) -9
+  return int(qnt)
 
 '''
 Faça uma função busca_qtd_jogos que retorna quantos
@@ -265,9 +265,10 @@ def busca_qtd(texto_buscar, query = ''):
   return qnt
 
 def conta_tipos_de_midia_para_busca(texto_buscar):
-  movies = busca_qtd(texto_buscar, 'type=movie')
-  series = busca_qtd(texto_buscar, 'type=series')
-  return { 'movie':movies, 'series':series } 
+  movies = int(busca_qtd(texto_buscar, 'type=movie'))
+  series = int(busca_qtd(texto_buscar, 'type=series'))
+  games  = int(busca_qtd(texto_buscar, 'type=game'))
+  return { 'movie':movies, 'series':series, 'game':games } 
 
 '''
 Outra coisa que podemos fazer com nossos 10 resultados é
@@ -277,8 +278,13 @@ A função id_do_mais_velho faz exatamente isso:
  * Recebe um texto a buscar;
  * Retorna a id do mais velho dentre os 10 primeiros.
 '''
+def Year(e):
+  return int(e['Year'])
+
 def id_do_mais_velho(texto_buscar):
-    pass
+    req = busca_por_texto(texto_buscar)['Search']
+    req.sort(key=Year)
+    return req[0]['imdbID']
 
 '''
 Faça uma função ids_dos_tres_primeiros, que faz uma busca
@@ -286,7 +292,8 @@ e retorna uma lista com as ids dos três primeiros produtos
 encontrados.
 '''
 def ids_dos_tres_primeiros(texto_buscar):
-    pass
+    req = busca_por_texto(texto_buscar)['Search']
+    return [req[0]['imdbID'], req[1]['imdbID'], req[2]['imdbID']]
 
 '''
 Agora, podemos cruzar os dados.
@@ -300,8 +307,15 @@ string para buscar, e retorna a id do mais bem avaliado entre os
 
 Não façamos com mais resultados, para não sobrecarregar o servidor.
 '''
+def Metascore(e):
+  return int(e['Metascore'])
 def mais_bem_avaliado_dos_3_primeiros(texto_buscar):
-    pass
+    req = ids_dos_tres_primeiros(texto_buscar)
+    req[0] = busca_por_id(req[0])
+    req[1] = busca_por_id(req[1])
+    req[2] = busca_por_id(req[2])
+    req.sort(reverse=True, key=Metascore)
+    return req[0]['imdbID']
 
 '''
 A próxima função já vem pronta, mas vamos melhorar ela depois.
@@ -316,9 +330,13 @@ def baixar_poster(id_filme):
     url = "http://img.omdbapi.com/?apikey={0}&i={1}".format(api_key, id_filme)
     retorno = req.get(url)
 
-    arquivo = open("Poster.jpg", "wb")
-    arquivo.write(retorno.content)
-    arquivo.close()
+    if retorno.status_code == 404:
+      return 'id inválida'
+    if retorno.status_code == 200:
+      arquivo = open("Poster.jpg", "wb")
+      arquivo.write(retorno.content)
+      arquivo.close()
+      return 'id válida'
 
 '''
 'tt0796366' é a id de star trek.
@@ -348,20 +366,20 @@ import unittest
 
 class TestStringMethods(unittest.TestCase):
     def test_000_qdt_total(self):
-        self.assertTrue(439 * 0.9 < int(busca_qtd_total('star wars')) < 439 * 1.1)
-        self.assertTrue(283 * 0.9 < int(busca_qtd_total('star trek')) < 283 * 1.1)
+        self.assertTrue(439 * 0.9 < int(busca_qtd_total('star wars')) < 439 * 1.3)
+        self.assertTrue(283 * 0.9 < int(busca_qtd_total('star trek')) < 283 * 1.3)
 
     def test_001_qdt_filmes(self):
-        self.assertTrue(305 * 0.9 < int(busca_qtd_filmes('star wars')) < 305 * 1.1)
-        self.assertTrue(186 * 0.9 < int(busca_qtd_filmes('star trek')) < 186 * 1.1)
-        self.assertTrue(111 * 0.9 < int(busca_qtd_filmes('menace')) < 1.1 * 111)
-        self.assertTrue(964 * 0.9 < int(busca_qtd_filmes('future')) < 964 * 1.1)
+        self.assertTrue(305 * 0.9 < int(busca_qtd_filmes('star wars')) < 305 * 1.3)
+        self.assertTrue(186 * 0.9 < int(busca_qtd_filmes('star trek')) < 186 * 1.3)
+        self.assertTrue(111 * 0.9 < int(busca_qtd_filmes('menace')) < 1.3 * 111)
+        self.assertTrue(964 * 0.9 < int(busca_qtd_filmes('future')) < 964 * 1.3)
 
     def test_002_qdt_jogos(self):
-        self.assertTrue(96 * 0.9 < int(busca_qtd_jogos('star wars')) < 1.1 * 96)
-        self.assertTrue(55 * 0.9 < int(busca_qtd_jogos('star trek')) < 1.1 * 55)
+        self.assertTrue(96 * 0.9 < int(busca_qtd_jogos('star wars')) < 1.3 * 96)
+        self.assertTrue(55 * 0.9 < int(busca_qtd_jogos('star trek')) < 1.3 * 55)
         self.assertTrue( 8 * 0.8 < int(busca_qtd_jogos('menace')) < 1.2 *  8)
-        self.assertTrue(34 * 0.9 < int(busca_qtd_jogos('future')) < 1.1 * 34)
+        self.assertTrue(34 * 0.9 < int(busca_qtd_jogos('future')) < 1.3 * 34)
 
     def test_003_nome_do_filme_por_id(self):
         self.assertEqual(nome_do_filme_por_id('tt0796366'), 'Star Trek')
@@ -445,13 +463,11 @@ class TestStringMethods(unittest.TestCase):
         resposta = dicionario_do_filme_por_id('tt0796366')
         self.assertTrue(0.81 < resposta['nota_media'] < 0.89)
         resposta = dicionario_do_filme_por_id('tt0861739')
-        self.assertTrue(0.51 < resposta['nota_media'] < 0.59)
+        self.assertTrue(0.41 < resposta['nota_media'] < 0.59)
 
     def test_013_conta_tipos_de_midia_para_busca(self):
         d1 = conta_tipos_de_midia_para_busca('menace')
-        self.assertEqual(d1, {'movie': 8, 'series': 2})
-        d1 = conta_tipos_de_midia_para_busca('grim fandango')
-        self.assertEqual(d1, {'game': 2})
+        self.assertEqual(d1, {'movie': 115, 'series': 12, 'game': 8})
    
     def test_014_id_do_mais_velho(self):
         self.assertEqual(id_do_mais_velho('star wars'), 'tt0076759')
