@@ -1,7 +1,7 @@
-
-## SERVIDOR ESTA NO ARQUIVO APP 
-## SERVIDOR ESTA NO ARQUIVO APP 
-## SERVIDOR ESTA NO ARQUIVO APP 
+'''
+ Nome: Nicholas Mota Ferreira
+ RA: 1900953
+'''
 
 class Aluno():
   def __init__(self, id, nome):
