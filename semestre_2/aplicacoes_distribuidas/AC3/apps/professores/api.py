@@ -1,5 +1,6 @@
 from flask import Blueprint, request, jsonify
 from apps.professores.models import Professor
+from apps.disciplinas.api import disciplinas
 
 professores = [
   Professor(1, 'Lucas Mendes Marques Gonçalves'),
@@ -48,7 +49,14 @@ def store():
 
 @bp.route('/<int:id_professor>', methods=['DELETE'])
 def destroy(id_professor):
-  # Não deixe excluir o professor que seja coordenador de alguma disciplina.
+  has_coordenador = False
+  for disciplina in disciplinas:
+    if disciplina.id_coordenador == id_professor:
+      has_coordenador = True
+
+  if has_coordenador:
+    return {'erro': 'Professor não pode ser demitido pois é coordenador'}, 418
+      
   for idx, professor in enumerate(professores):
     if professor.id == id_professor:
       del professores[idx]
