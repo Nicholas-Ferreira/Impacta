@@ -1,0 +1,379 @@
+{
+	"info": {
+		"_postman_id": "17ac0e9a-85bd-4ecd-9cd0-268e467bad18",
+		"name": "AC 3 - DAD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Alunos",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/alunos",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"alunos"
+							]
+						},
+						"description": "Pegar todos os alunos"
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/alunos/1",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"alunos",
+								"1"
+							]
+						},
+						"description": "Pegar todos os alunos"
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 8,\n\t\"nome\": \"Joãozinho\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/alunos",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"Nicholas Ferreira\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/alunos/1",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"alunos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/alunos/8",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"alunos",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Disciplinas",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/disciplinas",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"disciplinas"
+							]
+						},
+						"description": "Pegar todos os alunos"
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/disciplinas/4",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"disciplinas",
+								"4"
+							]
+						},
+						"description": "Pegar todos os alunos"
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 8,\n\t\"nome\": \"IA\",\n\t\"status\": 1,\n\t\"plano_ensino\": \"Estudo do Instindo Animal\",\n\t\"carga_horaria\": 560,\n\t\"id_coordenador\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/disciplinas",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"disciplinas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"I.A.\",\n\t\"status\": 1,\n\t\"plano_ensino\": \"Estudo do Instindo Animal\",\n\t\"carga_horaria\": 560,\n\t\"id_coordenador\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/disciplinas/8",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"disciplinas",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/disciplinas/8",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"disciplinas",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Professores",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/professores",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"professores"
+							]
+						},
+						"description": "Pegar todos os alunos"
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_api}}/professores/4",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"professores",
+								"4"
+							]
+						},
+						"description": "Pegar todos os alunos"
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 7,\n\t\"nome\": \"Joãozinho\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/professores",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"professores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"Emilio\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/professores/4",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"professores",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_api}}/professores/3",
+							"host": [
+								"{{url_api}}"
+							],
+							"path": [
+								"professores",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
