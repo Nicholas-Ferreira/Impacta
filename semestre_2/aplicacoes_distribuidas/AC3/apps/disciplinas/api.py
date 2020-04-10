@@ -77,8 +77,6 @@ def update(id_disciplina):
     return {'erro': 'ID não encontrado'}, 404
   if not req:
     return {'erro': 'Necessário envio do corpo'}, 400
-  if 'id' not in req:
-    return {'erro': 'Disciplina sem id'}, 400
   if 'nome' not in req:
     return {'erro': 'Disciplina sem nome'}, 400
   if 'status' not in req:
@@ -100,4 +98,4 @@ def update(id_disciplina):
   disciplina.carga_horaria = req['carga_horaria']
   disciplina.id_coordenador = req['id_coordenador']
 
-  return {'msg': 'disciplina alterado'}, 200
+  return {'msg': 'disciplina alterada'}, 200
