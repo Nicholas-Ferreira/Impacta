@@ -53,7 +53,7 @@ def destroy(id_aluno):
   for idx, aluno in enumerate(alunos):
     if aluno.id == id_aluno:
       del alunos[idx]
-      return {'msg': aluno.nome+' excluido'}, 200
+      return {'msg': aluno.nome+' foi expulso'}, 200
   return {'erro': 'ID não encontrado'}, 404
 
 @bp.route('/<int:id_aluno>', methods=['PUT'])
@@ -65,4 +65,4 @@ def update(id_aluno):
 
   aluno.nome = req['nome']
 
-  return {'erro': 'Aluno alterado'}, 200
+  return {'msg': 'Aluno alterado'}, 200
