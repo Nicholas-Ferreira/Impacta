@@ -1,5 +1,5 @@
 require('dotenv').config()
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 8080
 const jsonServer = require('json-server')
 const server = jsonServer.create()
 const router = jsonServer.router('./database/db.json')
