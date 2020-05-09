@@ -25,27 +25,27 @@
   ],
   "alunos": [
     {
-      "ra": 1900953,
+      "id": 1900953,
       "nome": "Nicholas Mota Ferreira",
       "grupo": 1
     },
     {
-      "ra": 1900519,
+      "id": 1900519,
       "nome": "Fernando de Souza Franco",
       "grupo": 1
     },
     {
-      "ra": 1901008,
+      "id": 1901008,
       "nome": "Leonardo Ferreira de Souza",
       "grupo": 1
     },
     {
-      "ra": 1901008,
+      "id": 1901008,
       "nome": "Lara Argento",
       "grupo": 1
     },
     {
-      "ra": 1901008,
+      "id": 1901008,
       "nome": "Lucas Eduardo Ano",
       "grupo": 1
     }
