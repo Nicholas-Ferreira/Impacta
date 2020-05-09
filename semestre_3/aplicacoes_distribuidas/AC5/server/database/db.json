@@ -9,6 +9,40 @@
       "nome": "Fernando de Souza Franco",
       "ra": "1900519",
       "id": 2
+    },
+    {
+      "nome": "Leonardo Ferreira de Souza",
+      "ra": "1901008",
+      "id": 3
+    }
+  ],
+  "grupos": [
+    {
+      "id": 1,
+      "nome": "Archeros",
+      "vida": 5,
+      "membros": [
+        {
+          "nome": "Nicholas Mota Ferreira",
+          "ra": "1900953"
+        },
+        {
+          "nome": "Fernando de Souza Franco",
+          "ra": "1900519"
+        },
+        {
+          "nome": "Leonardo Ferreira de Souza",
+          "ra": "1901008"
+        },
+        {
+          "nome": "Lara Argento",
+          "ra": "1901008"
+        },
+        {
+          "nome": "Lucas Eduardo Ano",
+          "ra": "1901008"
+        }
+      ]
     }
   ]
 }
