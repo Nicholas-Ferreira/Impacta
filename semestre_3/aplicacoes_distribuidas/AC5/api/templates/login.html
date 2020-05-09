@@ -8,9 +8,13 @@
   <div class="card-body">
     <h5 class="card-title">Impacta WAR</h5>
 
-    <input class="form-control ra" id="input-ra" type="text" name="ra" placeholder="RA" maxlength="7" />
-
-    <button class="btn btn-primary" id="btn-login" type="submit">Entrar</button>
+    <div class="container-input">
+      <input class="form-control ra" id="input-ra" type="text" name="ra" placeholder="RA" maxlength="7" />
+      <div class="invalid-feedback"></div>
+    </div>
+    <button class="btn btn-primary" id="btn-login" type="submit">
+      Entrar
+    </button>
   </div>
 </div>
 {% endblock %}

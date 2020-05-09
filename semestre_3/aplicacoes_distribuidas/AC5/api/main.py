@@ -6,13 +6,12 @@ from apps.alunos.api import bp as bp_alunos
 app = Flask('app')
 
 @app.route('/')
-def index():
+def login():
   return render_template('login.html')
 
-@app.route('/login', methods=['POST'])
-def login():
-  ra = request.form['ra']
-  return render_template('login.html')
+@app.route('/dashboard')
+def dashboard():
+  return render_template('dashboard.html')
   
 app.register_blueprint(bp_grupos, url_prefix='/grupos')
 app.register_blueprint(bp_alunos, url_prefix='/alunos')
