@@ -1,15 +1,23 @@
 from flask import Flask, request, render_template
 
+from apps.grupos.api import bp as bp_grupos
+from apps.alunos.api import bp as bp_alunos
+
 app = Flask('app')
 
 @app.route('/')
-def index():
-  return render_template('login.html')
-
-@app.route('/login', methods=['POST'])
 def login():
-  req = request.form
-  print(req['ra'])
   return render_template('login.html')
 
+<<<<<<< HEAD
 app.run(host='localhost', port='8081', debug=True)
+=======
+@app.route('/dashboard')
+def dashboard():
+  return render_template('dashboard.html')
+  
+app.register_blueprint(bp_grupos, url_prefix='/grupos')
+app.register_blueprint(bp_alunos, url_prefix='/alunos')
+
+app.run(host='0.0.0.0', port='8081', debug=True)
+>>>>>>> 16cedfccab13f2303712a80f990cfe878a5d69d7

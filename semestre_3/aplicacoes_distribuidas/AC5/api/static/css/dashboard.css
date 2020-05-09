@@ -1,6 +1,6 @@
 
 body {
-  background-image: url("../img/map-login.jpg");
+  background-image: url("../img/map-dashboard.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #fff;
@@ -8,12 +8,4 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-
-#btn-login {
-  width: 100%;
-}
-
-.container-input {
-  margin-bottom: 10px;
 }
