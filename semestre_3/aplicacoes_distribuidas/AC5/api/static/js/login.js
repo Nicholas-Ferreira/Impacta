@@ -15,4 +15,10 @@ function login() {
   }
 
   $.post('/login', { ra })
+    .then((res) => {
+      console.log(res)
+    })
+    .catch((err) => {
+
+    });
 }
