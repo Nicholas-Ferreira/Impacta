@@ -9,9 +9,6 @@ app = Flask('app')
 def login():
   return render_template('login.html')
 
-<<<<<<< HEAD
-app.run(host='localhost', port='8081', debug=True)
-=======
 @app.route('/dashboard')
 def dashboard():
   return render_template('dashboard.html')
@@ -19,5 +16,4 @@ def dashboard():
 app.register_blueprint(bp_grupos, url_prefix='/grupos')
 app.register_blueprint(bp_alunos, url_prefix='/alunos')
 
-app.run(host='0.0.0.0', port='8081', debug=True)
->>>>>>> 16cedfccab13f2303712a80f990cfe878a5d69d7
+app.run(host='localhost', port='8081', debug=True)
