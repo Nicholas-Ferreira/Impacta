@@ -1,0 +1,19 @@
+
+body {
+  background-image: url("../img/mapa-login.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#btn-login {
+  width: 100%;
+}
+
+#input-ra {
+  margin-bottom: 10px;
+}
