@@ -2,12 +2,83 @@
 {% block header %}
 <title>Impacta WAR</title>
 <link rel="stylesheet" href="static/css/dashboard.css">
+<link rel="stylesheet" href="static/css/mapa.css">
+<link rel="stylesheet" href="static/css/navbar.css">
 {% endblock %}
 {% block body %}
-<div class="background">
+<div class="wrapper">
+  {% include "navbar.html" %}
 
+  <!-- Page Content -->
+  <div id="content">
+    <div class="background">
+      <button type="button" id="sidebarCollapse" class="navbar-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <button class="btn btn-grupo" data-id="1">
+        <img src="static/icons/castle.svg" width="30px"/><br/>
+        <span class="grupo-nome">Archeros</span>
+      </button>
+      <button class="btn btn-grupo" data-id="1">
+        <img src="static/icons/castle.svg" width="30px"/><br/>
+        <span class="grupo-nome">XXXX</span>
+      </button>
+      <button class="btn btn-grupo" data-id="1">
+        <img src="static/icons/castle.svg" width="30px"/><br/>
+        <span class="grupo-nome">YYYY</span>
+      </button>
+
+      <button class="btn btn-grupo" data-id="1">
+        <img src="static/icons/castle.svg" width="30px"/><br/>
+        <span class="grupo-nome">ZZZZ</span>
+      </button>
+      <button class="btn btn-grupo" data-id="1">
+        <img src="static/icons/castle.svg" width="30px"/><br/>
+        <span class="grupo-nome">XXXX</span>
+      </button>
+      <button class="btn btn-grupo" data-id="1">
+        <img src="static/icons/castle.svg" width="30px"/><br/>
+        <span class="grupo-nome">YYYY</span>
+      </button>
+
+      <button class="btn btn-grupo" data-id="1">
+        <img src="static/icons/castle.svg" width="30px"/><br/>
+        <span class="grupo-nome">ZZZZ</span>
+      </button>
+      <button class="btn btn-grupo" data-id="1">
+        <img src="static/icons/castle.svg" width="30px"/><br/>
+        <span class="grupo-nome">XXXX</span>
+      </button>
+      <button class="btn btn-grupo" data-id="1">
+        <img src="static/icons/castle.svg" width="30px"/><br/>
+        <span class="grupo-nome">YYYY</span>
+      </button>
+
+      <button class="btn btn-grupo" data-id="1">
+        <img src="static/icons/castle.svg" width="30px"/><br/>
+        <span class="grupo-nome">ZZZZ</span>
+      </button>
+      <button class="btn btn-grupo" data-id="1">
+        <img src="static/icons/castle.svg" width="30px"/><br/>
+        <span class="grupo-nome">XXXX</span>
+      </button>
+      <button class="btn btn-grupo" data-id="1">
+        <img src="static/icons/castle.svg" width="30px"/><br/>
+        <span class="grupo-nome">YYYY</span>
+      </button>
+
+      <button class="btn btn-grupo takei" data-id="1">
+        <img src="static/icons/castle.svg" width="30px"><br>
+        <span class="grupo-nome">Takei</span>
+      </button>
+    </div>
+  </div>
 </div>
 {% endblock %}
 {% block footer %}
 <script src="static/js/dashboard.js"></script>
+<script src="static/js/mapa.js"></script>
 {% endblock %}

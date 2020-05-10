@@ -1,0 +1,94 @@
+.background {
+  position: relative;
+  background-image: url("../img/map-dashboard.jpg");
+  background-repeat: round;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sidebarCollapse {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
+
+.btn-grupo {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.137);
+  color: white;
+  font-weight: 600;
+}
+
+.btn-grupo:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.288);
+}
+
+.background .btn-grupo:nth-child(1) {
+  top: 13%;
+  left: 14%;
+}
+
+.background .btn-grupo:nth-child(2) {
+  top: 22%;
+  left: 35%;
+}
+
+.background .btn-grupo:nth-child(3) {
+  top: 37%;
+  left: 7%;
+}
+
+.background .btn-grupo:nth-child(4) {
+  top: 62%;
+  left: 11%;
+}
+
+.background .btn-grupo:nth-child(5) {
+  top: 83%;
+  left: 25%;
+}
+
+.background .btn-grupo:nth-child(6) {
+  top: 67%;
+  left: 33%;
+}
+
+.background .btn-grupo:nth-child(7) {
+  top: 41%;
+  left: 33%;
+}
+
+.background .btn-grupo:nth-child(8) {
+  top: 13%;
+  left: 15%;
+}
+
+.background .btn-grupo:nth-child(9) {
+  top: 28%;
+  left: 56%;
+}
+
+.background .btn-grupo:nth-child(10) {
+  top: 11%;
+  left: 50%;
+}
+
+.background .btn-grupo:nth-child(11) {
+  top: 8%;
+  left: 33%;
+}
+
+.background .btn-grupo:nth-child(12) {
+  top: 54%;
+  left: 24%;
+}
+
+.takei {
+  top: 14%;
+  left: 88%;
+  display: none;
+}
