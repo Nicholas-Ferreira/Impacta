@@ -1,11 +1,3 @@
-
 body {
-  background-image: url("../img/map-dashboard.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  background-color: #c9b993;
 }
