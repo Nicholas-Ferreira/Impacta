@@ -1,5 +1,7 @@
 $(document).ready(function () {
-  function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+  $('.btn-grupo').click(onAtaque)
 })
+
+function onAtaque() {
+  $('#modal_ataque').modal('show')
+}
