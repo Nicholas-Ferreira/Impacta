@@ -14,6 +14,16 @@
       "nome": "Leonardo Ferreira de Souza",
       "ra": 1901008,
       "id": 3
+    },
+    {
+      "nome": "Lucas eduaro ano",
+      "ra": 1900675,
+      "id": 4
+    },
+    {
+      "nome": "Lara Argento",
+      "ra": 1901118,
+      "id": 5
     }
   ],
   "grupos": [
@@ -21,7 +31,52 @@
       "id": 1,
       "nome": "Archeros",
       "vidas": 5
-    }
+    },
+     {
+      "id": 2,
+      "nome": "Suco De Fruta",
+      "vidas": 5
+    },
+     {
+      "id": 3,
+      "nome": " Invictus ",
+      "vidas": 5
+    },
+       {
+      "id": 4,
+      "nome": " Null Verify ",
+      "vidas": 5
+    },
+      {
+      "id": 5,
+      "nome": " Fogo na Lata ",
+      "vidas": 5
+    },
+      {
+      "id": 6,
+      "nome": " BombaPatch ",
+      "vidas": 5
+    },
+    {
+      "id": 7,
+      "nome": " PowerPuff Boys ",
+      "vidas": 5
+    },
+    {
+      "id": 8,
+      "nome": " Devil Foca ",
+      "vidas": 5
+    },
+    {
+      "id": 9,
+      "nome": " miranha. ",
+      "vidas": 5
+    },
+    {
+      "id": 10,
+      "nome": " AhNão ",
+      "vidas": 5
+    },
   ],
   "alunos": [
     {
@@ -48,6 +103,251 @@
       "id": 1901008,
       "nome": "Lucas Eduardo Ano",
       "grupo": 1
+    },
+    {
+      "id": 1900281,
+      "nome": "Ana Carolina Felicio",
+      "grupo":2 
+    },
+    {
+      "id": 1802513,
+      "nome": "Guilherme Nunes da Silva",
+      "grupo": 2
+    },
+    {
+      "id": 1900486,
+      "nome": "Guilherme Vilela Moreira",
+      "grupo": 2 
+    },
+    {
+      "id": 1900549,
+      "nome": "Larissa de Melo Bulgurlu",
+      "grupo": 2
+    },
+    {
+      "id": 1900550,
+      "nome": "Erick de Oliveira Fernandes",
+      "grupo": 2 
+    },
+    {
+      "id": 1900241,
+      "nome": "Erica Herculano Ribeiro ",
+      "grupo":2 
+    },
+    {
+      "id": 1900969,
+      "nome": "Vinícius Sousa dos Santos",
+      "grupo": 3
+    },
+    {
+      "id": 1802467,
+      "nome": "Lucas Buchalla Sesti",
+      "grupo": 3 
+    },
+    {
+      "id": 1900419,
+      "nome": "Matheus Iazzetta Rodrigues",
+      "grupo": 3
+    },
+    {
+      "id": 1801078,
+      "nome": "Vitor Selloti de Souza",
+      "grupo": 3 
+    },
+    {
+      "id": 1802408,
+      "nome": "João Pedro Baria",
+      "grupo": 3
+    },
+    {
+      "id": 1900326,
+      "nome": "Francisco Wallas Candido de Libra",
+      "grupo": 3
+    },
+    {
+      "id": 1800826,
+      "nome": "Antonio Nicolas De Almeida Silva",
+      "grupo": 4
+    },
+    {
+      "id": 1900997,
+      "nome": "Pablo Kalil Santana de Oliveira",
+      "grupo": 4
+    },
+    {
+      "id": 1900726,
+      "nome": "Bruna de Azevedo Manso",
+      "grupo": 4
+    },
+    {
+      "id": 1900406,
+      "nome": "Juliana Palhares dos Santos",
+      "grupo": 4
+    },
+    {
+      "id": 1900400,
+      "nome": "Danielle Fernandes de Lima",
+      "grupo": 4
+    },
+    {
+      "id": 1800839,
+      "nome": "Leandro Chaves da Silva",
+      "grupo": 4
+    },
+    {
+      "id": 1900114,
+      "nome": "Breno Henrique Rocha de Sant´Anna Sampaio",
+      "grupo": 5
+    },
+    {
+      "id": 1900538,
+      "nome": "Erick Soares dos Santos",
+      "grupo": 5
+    },
+    {
+      "id": 1900182,
+      "nome": "Felipe Vieira Adduci",
+      "grupo": 5
+    },
+    {
+      "id": 1900860,
+      "nome": "Thiago Pereira Tavares",
+      "grupo": 5
+    },
+    {
+      "id": 1900428,
+      "nome": "Wesley Camilo da Silva Nascimento",
+      "grupo": 5
+    },
+    {
+      "id": 1900986,
+      "nome": "André Pereira Prado",
+      "grupo": 6
+    },
+    {
+      "id": 1900257,
+      "nome": "Kainan Pinheiro da Silva",
+      "grupo": 6
+    },
+    {
+      "id": 1900038,
+      "nome": "Luan Almeida Felix dos Santos",
+      "grupo": 6
+    },
+    {
+      "id": 1802468,
+      "nome": "Guilherme Ferreira Araujo",
+      "grupo": 6
+    },
+    {
+      "id": 1900596,
+      "nome": "Vitor Hugo Guerra Silva ",
+      "grupo": 6
+    },
+    {
+      "id": 1900944,
+      "nome": "Sabrina da Silva Pereira ",
+      "grupo": 6
+    },
+    {
+      "id": 1802424,
+      "nome": "Gabriel De Lima Birochi Sarti",
+      "grupo": 7
+    },
+    {
+      "id": 1900404,
+      "nome": "Erik Xavier Do Nascimento",
+      "grupo": 7
+    },
+    {
+      "id": 1900950,
+      "nome": "Sérgio De Barros",
+      "grupo": 7
+    },
+    {
+      "id": 1900561,
+      "nome": "Lucas Duarte Piza",
+      "grupo": 7
+    },
+    {
+      "id": 1900375,
+      "nome": "João Victor Brotto Picolomini",
+      "grupo": 7
+    },
+    {
+      "id": 1802364,
+      "nome": "Luiz França",
+      "grupo": 8
+    },
+    {
+      "id": 1901175,
+      "nome": "Maikon Silva",
+      "grupo": 8
+    },
+    {
+      "id": 1901120,
+      "nome": "Lucas Alves",
+      "grupo": 8
+    },
+    {
+      "id": 1902669,
+      "nome": "Thiago Bruno",
+      "grupo": 8
+    },
+    {
+      "id": 1900946,
+      "nome": "João Marangoni",
+      "grupo": 8
+    },
+    {
+      "id": 1901228,
+      "nome": "Guilherme Domingues Reinhardt",
+      "grupo": 9
+    },
+    {
+      "id": 1901085,
+      "nome": "Vitor Aciole Duarte",
+      "grupo": 9
+    },
+    {
+      "id": 1901236,
+      "nome": "Bryan de Almeida ",
+      "grupo": 9
+    },
+    {
+      "id": 1901072,
+      "nome": "Bruna Carenzi",
+      "grupo": 9
+    },
+    {
+      "id": 1800722,
+      "nome": "Andrey Onoue",
+      "grupo": 9
+    },
+    {
+      "id": 1600536,
+      "nome": "Natan Pereira Costa",
+      "grupo": 10
+    },
+    {
+      "id": 1701265,
+      "nome": "Matheus Santos Souza",
+      "grupo": 10
+    },
+    {
+      "id": 1900045,
+      "nome": "Hariel Santana de Oliveira",
+      "grupo": 10
+    },
+    {
+      "id": 1901079,
+      "nome": "Luis Felipe Bocchini",
+      "grupo": 10
+    },
+    {
+      "id": 1901288,
+      "nome": "Igor Santos Silva",
+      "grupo": 10
     }
   ]
 }
