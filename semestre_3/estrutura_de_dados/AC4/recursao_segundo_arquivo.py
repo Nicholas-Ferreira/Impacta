@@ -179,14 +179,14 @@ Por exemplo, anagramas('ab') deve retornar ['ab','ba']
 '''
 
 def anagramas(palavra):
-  if len(palavra) <=1:
+  anagrama = []
+  if len(palavra) <= 1:
       return palavra
   else:
-    tmp = []
-    for aux in anagramas(palavra[1:]):
+    for resto in anagramas(palavra[1:]):
       for i in range(len(palavra)):
-        tmp.append(aux[:i] + palavra[0:1] + aux[i:])
-    return tmp
+        anagrama.append(resto[:i] + palavra[0] + resto[i:])
+    return anagrama
 
 '''
 A partir daqui, não tem nada pra você implementar
