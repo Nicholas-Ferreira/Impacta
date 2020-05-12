@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify
 from constants import API_URL
 import requests as req
 
-bp = Blueprint('alunos', __name__)
+bp = Blueprint('ataques', __name__)
 
 @bp.route('', methods=['GET'])
 def index():
@@ -15,3 +15,7 @@ def show(ra):
   if not aluno:
     return {}, 404
   return jsonify(aluno), 200
+
+@bp.route('', methods=['POST'])
+def store():
+  return {}, 200
