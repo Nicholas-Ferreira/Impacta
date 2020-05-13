@@ -54,6 +54,28 @@
     border-bottom-style: solid;
 }
 
+ul {
+  padding: 5px;
+}
+
+li > button {
+  cursor: pointer;
+  list-style: none;
+  background: #ffffff4a;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  text-align-last: center;
+  width: 100%;
+  color: white;
+}
+
+button > label {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */

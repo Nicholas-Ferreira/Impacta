@@ -13,14 +13,6 @@ def index():
 def show(id):
   return {}, 200
 
-@bp.route('', methods=['POST'])
-def store():
-  return {}, 200
-
-@bp.route('/<int:id>', methods=['DELETE'])
-def destroy(id):
-  return {}, 404
-
-@bp.route('/<int:id>', methods=['PUT'])
+@bp.route('/<int:id>', methods=['PATCH'])
 def update(id):
   return {}, 200
