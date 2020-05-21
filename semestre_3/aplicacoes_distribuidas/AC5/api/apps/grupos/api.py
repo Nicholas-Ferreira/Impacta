@@ -7,12 +7,13 @@ bp = Blueprint('grupos', __name__)
 @bp.route('', methods=['GET'])
 def index():
   grupos = req.get(f'{API_URL}/grupos').json()
-  return jsonify(grupos), 200
+  if not grupos:
+    return jsonify(grupos), 200
+  return {}, 404
 
 @bp.route('/<int:id>', methods=['GET'])
 def show(id):
-  return {}, 200
-
-@bp.route('/<int:id>', methods=['PATCH'])
-def update(id):
-  return {}, 200
+  grupo = req.get(f'{API_URL}/grupos/{id}').json()
+  if not grupo:
+    return jsonify(grupo), 200
+  return {}, 404
