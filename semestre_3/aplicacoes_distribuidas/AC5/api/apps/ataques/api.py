@@ -6,16 +6,20 @@ bp = Blueprint('ataques', __name__)
 
 @bp.route('', methods=['GET'])
 def index():
-  alunos = req.get(f'{API_URL}/alunos').json()
-  return jsonify(alunos), 200
+  ataques = req.get(f'{API_URL}/ataques').json()
+  return jsonify(ataques), 200
 
-@bp.route('/<int:ra>', methods=['GET'])
-def show(ra):
-  aluno = req.get(f'{API_URL}/alunos/{ra}').json()
+@bp.route('/<int:codigo>', methods=['GET'])
+def show(codigo):
+  aluno = req.get(f'{API_URL}/ataques/{codigo}').json()
   if not aluno:
     return {}, 404
   return jsonify(aluno), 200
 
-@bp.route('', methods=['POST'])
-def store():
-  return {}, 200
+@bp.route('/<int:codigo>', methods=['PATCH'])
+def update(codigo):
+  req = request.json()
+  ataques = req.patch(f'{API_URL}/ataques/{codigo}', req).json()
+  if not ataques:
+    return {}, 404
+  return jsonify(ataques), 200
