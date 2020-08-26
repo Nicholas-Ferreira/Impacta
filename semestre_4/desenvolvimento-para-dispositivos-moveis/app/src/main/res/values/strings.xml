@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Desenvolvimento para Dispositivos Móveis</string>
+    <string name="mensagem_inicial">Welcome to DarkSide</string>
 </resources>
