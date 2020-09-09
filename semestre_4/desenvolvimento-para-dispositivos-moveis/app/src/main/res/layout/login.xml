@@ -6,7 +6,14 @@
     android:padding="15dp"
     android:background="#FFF">
 
-
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="246dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/logo"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"/>
 
     <TextView
         android:id="@+id/textView"
@@ -16,27 +23,20 @@
         android:textAlignment="center"
         android:textSize="20sp"/>
 
-    <ImageView
-        android:id="@+id/imageViewLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="246dp"
-        android:layout_gravity="center"
-        app:srcCompat="@drawable/logo"
-        android:layout_marginBottom="30dp"/>
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="E-mail" />
+        android:text="RA" />
 
     <EditText
-        android:id="@+id/etEmail"
+        android:id="@+id/etRA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textEmailAddress"
-        android:layout_marginBottom="10dp"/>
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="10dp"
+        android:textColor="@android:color/black"/>
 
     <TextView
         android:id="@+id/textView3"
@@ -50,13 +50,15 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:ems="10"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColor="@android:color/black" />
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Entrar" />
+        android:text="@string/btn_login"
+        android:background="@color/colorButton"/>
 
     <TextView
         android:id="@+id/tvResult"

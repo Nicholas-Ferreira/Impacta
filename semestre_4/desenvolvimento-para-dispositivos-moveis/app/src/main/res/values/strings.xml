@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">Desenvolvimento para Dispositivos Móveis</string>
-    <string name="mensagem_inicial">Welcome to DarkSide</string>
+    <string name="app_name">Impacta War</string>
+    <string name="mensagem_inicial">This is Sparta!</string>
+    <string name="action_buscar">Buscar</string>
+    <string name="action_atualizar">Atualizar</string>
+    <string name="action_configuracao">Configuração</string>
+    <string name="btn_login">Entrar</string>
 </resources>
