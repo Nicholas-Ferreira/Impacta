@@ -12,7 +12,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".DashboardActivity"
-            android:theme="@style/AppTheme.Toolbar"/>
+            android:theme="@style/AppTheme.Toolbar">
+        </activity>
         <activity android:name=".DebugActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

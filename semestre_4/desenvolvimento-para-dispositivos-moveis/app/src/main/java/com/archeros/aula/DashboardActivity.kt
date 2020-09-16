@@ -14,8 +14,7 @@ class DashboardActivity : DebugActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
         setSupportActionBar(toolbar_view)
-        supportActionBar?.title = "Impacta War"
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Roadmap"
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
