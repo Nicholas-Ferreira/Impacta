@@ -23,56 +23,56 @@
         android:textSize="20sp"
         android:layout_marginVertical="30dp"/>
 
-    <com.google.android.material.textfield.TextInputLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
-        android:hint="RA">
+        android:text="RA"
+        />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etRA"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="numberDecimal"
-            android:layout_marginBottom="10dp"/>
-    </com.google.android.material.textfield.TextInputLayout>
+    <EditText
+        android:id="@+id/etRA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/colorAccent"/>
 
-    <com.google.android.material.textfield.TextInputLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
-        android:hint="Senha">
+        android:text="Senha"/>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:ems="10"
-            android:inputType="textPassword"/>
-    </com.google.android.material.textfield.TextInputLayout>
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:backgroundTint="@color/colorAccent"/>
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp">
 
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorButton"
             android:stateListAnimator="@null"
             android:text="@string/btn_login"
-            android:textSize="16sp"/>
+            android:background="@color/colorButton"/>
 
         <ProgressBar
             android:id="@+id/btnLoginLoading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:indeterminateTint="@android:color/black"
-            android:visibility="invisible"
-            android:layout_margin="10dp"/>
+            android:indeterminateTint="@android:color/white"
+            android:visibility="invisible" />
 
     </FrameLayout>
 
